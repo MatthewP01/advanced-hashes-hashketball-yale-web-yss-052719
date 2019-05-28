@@ -201,18 +201,23 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-  # shoe_size = 0
-  # no_of_rebounds = 0
-  #   game_hash.each do |location, team_data|
-  #     team_data[:players].each do |stats|
-  #       if stats[:shoe] > shoe_size
-  #         shoe_size = stats[:shoe]
-  #         no_of_rebounds = stats[:rebounds]
-  #         end
-  #       end
-  #     end
-  #   return no_of_rebounds
-  # end
-  big_shoes = game_hash[:home][:players]["Mason Plumlee"]
-  rebounds = big_shoes[:rebounds]
+  shoe_size = 0
+  no_of_rebounds = 0
+    game_hash.each do |location, team_data|
+      team_data.each do |x, y|
+        if x == :players
+          y.each do |i, j|
+            j.each do |a, b|
+              
+        end
+        if stats[:shoe] > shoe_size
+          shoe_size = stats[:shoe]
+          no_of_rebounds = stats[:rebounds]
+        end
+      end
+    end
+
+  return no_of_rebounds
+  # big_shoes = game_hash[:home][:players]["Mason Plumlee"]
+  # rebounds = big_shoes[:rebounds]
 end
